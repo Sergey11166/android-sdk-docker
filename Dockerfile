@@ -14,6 +14,7 @@ ADD https://dl.google.com/android/repository/${ANDROID_SDK_TOOLS_ZIP_FILE} /opt
 RUN unzip /opt/${ANDROID_SDK_TOOLS_ZIP_FILE} -d ${ANDROID_HOME} && \
 	rm -f /opt/${ANDROID_SDK_TOOLS_ZIP_FILE} && \
 	echo y | sdkmanager "build-tools;28.0.3" "platforms;android-28" && \
+	echo y | sdkmanager "system-images;android-28;google_apis;x86_64" && \
 	echo y | sdkmanager "extras;android;m2repository" "extras;google;m2repository"
 
 # Clean up
