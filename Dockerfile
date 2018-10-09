@@ -3,7 +3,7 @@ FROM openjdk:8-jdk
 RUN mkdir -p /opt/android-sdk-linux && mkdir -p ~/.android && touch ~/.android/repositories.cfg
 
 ENV ANDROID_HOME=/opt/android-sdk-linux
-ENV PATH=PATH=${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:$PATH
+ENV PATH=PATH=${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:$PATH
 ENV ANDROID_SDK_TOOLS_ZIP_FILE=sdk-tools-linux-4333796.zip
 
 # Install tools
