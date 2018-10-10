@@ -1,5 +1,7 @@
 FROM openjdk:8-jdk
 
+RUN apt-get -q --yes update && apt-get -q --yes install lib32stdc++6 lib32z1 
+
 RUN mkdir -p /opt/android-sdk-linux && mkdir -p /root/.android && touch /root/.android/repositories.cfg
 
 ENV ANDROID_HOME=/opt/android-sdk-linux
