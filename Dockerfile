@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk
 
-RUN mkdir -p /opt/android-sdk-linux && mkdir -p ~/.android && touch ~/.android/repositories.cfg
+RUN mkdir -p /opt/android-sdk-linux && mkdir -p /root/.android && touch /root/.android/repositories.cfg
 
 ENV ANDROID_HOME=/opt/android-sdk-linux
 ENV PATH=PATH=${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:$PATH
