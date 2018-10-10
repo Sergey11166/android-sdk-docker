@@ -23,7 +23,7 @@ RUN unzip /opt/${ANDROID_SDK_TOOLS_ZIP_FILE} -d ${ANDROID_HOME} && \
   	echo "e9acab5b5fbb560a72cfaecce8946896ff6aab9d" >> $ANDROID_HOME/licenses/mips-android-sysimage-license && \
 	echo y | sdkmanager --update && \
 	echo y | sdkmanager "build-tools;28.0.3" "platforms;android-28" && \
-	echo y | sdkmanager "system-images;android-28;google_apis;x86_64" "system-images;android-25;google_apis;armeabi-v7a" && \
+	echo y | sdkmanager "system-images;android-19;default;armeabi-v7a" && \
 	echo y | sdkmanager "extras;android;m2repository" "extras;google;m2repository"
 
 # Clean up
