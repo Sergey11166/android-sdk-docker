@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends unzip wget sudo
 ADD https://dl.google.com/android/repository/${ANDROID_SDK_TOOLS_ZIP_FILE} /opt
 RUN unzip /opt/${ANDROID_SDK_TOOLS_ZIP_FILE} -d ${ANDROID_HOME} && \
 	rm -f /opt/${ANDROID_SDK_TOOLS_ZIP_FILE} && \
-	mkdir $ANDROID_HOME/licenses
+	mkdir $ANDROID_HOME/licenses && \
   	echo "601085b94cd77f0b54ff86406957099ebe79c4d6" >> $ANDROID_HOME/licenses/android-googletv-license && \
   	echo "d56f5187479451eabf01fb78af6dfcb131a6481e" >> $ANDROID_HOME/licenses/android-sdk-license && \
   	echo "84831b9409646a918e30573bab4c9c91346d8abd" >> $ANDROID_HOME/licenses/android-sdk-preview-license && \
