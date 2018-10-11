@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk
 
-RUN apt-get -q --yes update && apt-get -q --yes install lib32stdc++6 lib32z1 
+RUN apt-get -q --yes update
 
 RUN mkdir -p /opt/android-sdk-linux && mkdir -p /root/.android && touch /root/.android/repositories.cfg
 
@@ -23,7 +23,6 @@ RUN unzip /opt/${ANDROID_SDK_TOOLS_ZIP_FILE} -d ${ANDROID_HOME} && \
   	echo "e9acab5b5fbb560a72cfaecce8946896ff6aab9d" >> $ANDROID_HOME/licenses/mips-android-sysimage-license && \
 	echo y | sdkmanager --update && \
 	echo y | sdkmanager "build-tools;28.0.3" "platforms;android-28" && \
-	echo y | sdkmanager "system-images;android-28;google_apis;x86_64" && \
 	echo y | sdkmanager "extras;android;m2repository" "extras;google;m2repository"
 
 # Clean up
