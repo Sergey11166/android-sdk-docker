@@ -5,7 +5,7 @@ RUN apt-get -q --yes update
 RUN mkdir -p /opt/android-sdk-linux && mkdir -p /root/.android && touch /root/.android/repositories.cfg
 
 ENV ANDROID_HOME=/opt/android-sdk-linux
-ENV PATH=PATH=${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:$PATH
+ENV PATH=${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:$PATH
 ENV ANDROID_SDK_TOOLS_ZIP_FILE=sdk-tools-linux-3859397.zip
 
 # Install tools
